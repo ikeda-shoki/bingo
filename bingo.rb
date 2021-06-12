@@ -36,7 +36,7 @@ def bingo_column(index, bingoSize, bingoCard)
   column.all? { |i| i == "OPEN"}
 end
 
-#bingo_diagonal処理は、左上からと右上でまとめて書くことができそうだったが、今の自分では簡潔に2つの処理をまとめて書くことが難しかった為、分けて書いています。
+# 斜めビンゴ処理をまとめて簡潔に書くことが、今の自分では難しく、左上からと右上からで2つの処理に分けて書いています。
 def bingo_diagonal_left(bingoSize, bingoCard)
   num = 0
   diagonal = []
@@ -67,8 +67,9 @@ def bingo_diagonal_right(bingoSize, bingoCard)
   diagonal.all? { |i| i == "OPEN"}
 end
 
-#斜めビンゴ処理の方が縦横の全てのビンゴ処理より、処理数が少なかった為に先に記載
-#斜めがビンゴしているか確認する
+# ビンゴ処理をまとめて書く技術がなく、2通りで記載
+
+# 斜めがビンゴしているか確認する
 if bingo_diagonal_left(bingoSize, bingoCard)
   bingo = "yes"
 elsif bingo_diagonal_right(bingoSize, bingoCard)
@@ -92,4 +93,4 @@ if bingo == "no"
   end
 end
 
-p bingo
+puts bingo
