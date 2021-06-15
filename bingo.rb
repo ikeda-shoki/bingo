@@ -67,7 +67,7 @@ def bingo_diagonal_right(bingoSize, bingoCard)
   diagonal.all? { |i| i == "OPEN"}
 end
 
-# ビンゴ処理をまとめて書く技術がなく、2通りで記載
+# ビンゴ処理をまとめて簡潔に見やすく書く技術がなく、2通りで記載
 
 # 斜めがビンゴしているか確認する
 if bingo_diagonal_left(bingoSize, bingoCard)
